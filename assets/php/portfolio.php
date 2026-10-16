@@ -14,19 +14,19 @@ if($_GET["page"] == "art") {
 	$listaIllustra = "";
 
 	//visualizza pixel
-	$stringaPixel = "<article id='pixel' class='frow' style='margin-top: 80px;'>";
+	$listaPixel = "<article id='pixels' class='frow'>";
 
 	$sql = "select * from PIXEL order by PIXEL.nOrder";
 	foreach($pdo->query($sql) as $row) {
-		$stringaPixel .= "<div class='column'>
+		$listaPixel .= "<div class='column'>
 		<a data-toggle='modal' data-target='#". $row["urlPix"]. "' role='button'>
 		<img src='". $row["urlPix"]. "' class='hover-shadow pixel' /></a>
 		</div>";
 	}//foreach
-	$stringaPixel .= "</article>";
+	$listaPixel .= "</article>";
 
 	//visualizza illustrazioni
-	$listaIllustra = "<article id='illustra' style='margin-top=30px;'>";
+	$listaIllustra = "<article id='illustras' style='margin-top=30px;'>";
 
 	$sq1 = "select * from ILLUSTRA";
 	foreach($pdo->query($sq1) as $row) {

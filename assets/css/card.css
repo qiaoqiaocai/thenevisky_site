@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Ysabeau:ital,wght@0,400;1,300&display=swap');
 
+:root {
+    --text: black;
+    --cardBackground: white;
+    --button: #FF4742;
+    --buttonText: white;
+    --textFooter: white;
+}
+
 body {
     font-family: 'Ysabeau', sans-serif;
     font-size: 1em;
@@ -8,44 +16,47 @@ body {
 
 /* navigation */
 button {
-    background: #FF4742;
-    border: 1px solid #FF4742;
+    background: var(--button);
+    border: 1px solid var(--button);
     border-radius: 10px 10px 0px 0px;
     padding: 0.5em;
     font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
     font-size: 16px;
-    color: white;
+    color: var(--buttonText);
     cursor: pointer;
 }
 
 button:hover, .active {
-    background-color: white;
-    border: 1px solid white;
-    color: #FF4742;
+    background-color: var(--buttonText);
+    border: 1px solid var(--buttonText);
+    color: var(--button);
 }
 
 /* main */
 article {
-    background-color: white;
-    min-width: 450px;
-    min-height: 300px;
+    background-color: var(--cardBackground);
+    min-width: 28em;
+    min-height: 18em;
     border-radius: 0px 10px 10px 10px;
+    padding: 0.5em;
 }
 
 .avatar {
     width: 45%;
     text-align: center;
     display: inline-block;
+    margin-top: 1em;
 }
 
-.illustra {
-    width: 170px;
-    margin-top: 16px;
-}
+.illustra { width: 170px; }
 
 .descr { display: inline-block; }
 
-ul { list-style-type: none; }
+ul { 
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+}
 
 .center {
     margin: 0 auto;
@@ -59,20 +70,22 @@ ul { list-style-type: none; }
 .hide { display: none; }
 
 /* info-tab */
-.socials { text-align: center; }
+.socials { 
+    text-align: center;
+    margin-top: 1em;
+}
 
 .socials li { display: inline; }
 
 .icon {
-    width: 35px;
-    margin: 13px;
-    margin-bottom: 6px;
+    width: 2.5em;
+    margin: 1em;
 }
 
 /* links-tab */
 .links {
-    background: #FF4742;
-    color: white;
+    background: var(--button);
+    color: var(--buttonText);
     text-decoration: none;
     padding: 10px;
     width: 140px;
@@ -82,15 +95,15 @@ ul { list-style-type: none; }
 }
 
 .links:hover {
-    border: 1px solid #FF4742;
-    background-color: white;
-    color: #FF4742;
+    border: 1px solid var(--button);
+    background-color: var(--buttonText);
+    color: var(--button);
     padding: 9px;
 }
 
 footer {
     text-align: center;
-    color: white;
+    color: var(--textFooter);
     padding-top: 1em;
 }
 
